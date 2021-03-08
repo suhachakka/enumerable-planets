@@ -9,6 +9,26 @@
 </head>
 <body>
 <h1>Pick a planet:</h1>
+<div class="form-group">
+
+    <ul>
+        <th:block th:each="planet :${planets}">
+<!--            <li th:text="${planet}"></li>-->
+        <li th:text="${planet.displayName} + ' : ' + ${planet.yearLength}"></li>
+
+        </th:block>
+
+    </ul>
+<!--    <div class="form-group">-->
+<!--        <label> Type-->
+<!--            <select th:field="${planets}">-->
+<!--                <option th:each="planet : ${planets}"-->
+<!--                        th:value="${planet}"-->
+<!--                        th:text="${planet.displayName}"></option>-->
+<!--            </select>-->
+<!--        </label>-->
+<!--    </div>-->
+</div>
 
 </body>
 </html>
